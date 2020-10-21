@@ -20,4 +20,9 @@ export class AppComponent {
       municipio: 'Salem Center',
     },
   };
+  valorPromesa = new Promise<string>((resolve) => {
+    setTimeout(() => {
+      resolve('Fin de setTimeout(3500)');
+    }, 3500);
+  });
 }
