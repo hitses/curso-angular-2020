@@ -30,4 +30,5 @@ export class AppComponent {
   idioma = 'es';
 
   jero = 'jErÓnImO gAscÓn sÁnchEz';
+  videoUrl = 'https://www.youtube.com/embed/mdoNlV9GH6E';
 }
