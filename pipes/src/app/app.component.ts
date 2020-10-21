@@ -9,4 +9,5 @@ export class AppComponent {
   nombre = 'Capitán América';
   pi = Math.PI;
   porcentaje = 0.234;
+  salario = 1234.5;
 }
