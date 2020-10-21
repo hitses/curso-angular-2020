@@ -25,4 +25,6 @@ export class AppComponent {
       resolve('Fin de setTimeout(3500)');
     }, 3500);
   });
+
+  fecha = new Date();
 }
