@@ -28,4 +28,6 @@ export class AppComponent {
 
   fecha = new Date();
   idioma = 'es';
+
+  jero = 'jErÓnImO gAscÓn sÁnchEz';
 }

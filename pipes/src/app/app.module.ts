@@ -9,10 +9,12 @@ registerLocaleData(localEs);
 registerLocaleData(localJa);
 
 import { AppComponent } from './app.component';
+import { CapitalizarPipe } from './pipes/capitalizar.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CapitalizarPipe
   ],
   imports: [
     BrowserModule
