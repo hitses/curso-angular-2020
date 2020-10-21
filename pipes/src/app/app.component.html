@@ -54,8 +54,14 @@
         </tr>
         <tr>
           <td>{{fecha}}</td>
-          <td>date:'fullDate'</td>
-          <td>{{fecha | date:'fullDate'}}</td>
+          <td>
+            date:'fullDate':'':'{{idioma}}'
+            <br>
+            <button (click)="idioma='es'" class="mr-1 btn btn-outline-primary">Español</button>
+            <button (click)="idioma='en'" class="mr-1 btn btn-outline-secondary">Inglés</button>
+            <button (click)="idioma='ja'" class="mr-1 btn btn-outline-success">Japonés</button>
+          </td>
+          <td>{{fecha | date:'fullDate':'':idioma}}</td>
         </tr>
       </tbody>
     </table>

@@ -3,8 +3,10 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { registerLocaleData } from '@angular/common';
 import localEs from '@angular/common/locales/es';
+import localJa from '@angular/common/locales/ja';
 
 registerLocaleData(localEs);
+registerLocaleData(localJa);
 
 import { AppComponent } from './app.component';
 
@@ -19,7 +21,7 @@ import { AppComponent } from './app.component';
     {
       provide: LOCALE_ID,
       useValue: 'es',
-    }
+    },
   ],
   bootstrap: [AppComponent]
 })

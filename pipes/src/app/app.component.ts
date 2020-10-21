@@ -27,4 +27,5 @@ export class AppComponent {
   });
 
   fecha = new Date();
+  idioma = 'es';
 }
