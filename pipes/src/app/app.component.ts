@@ -10,4 +10,14 @@ export class AppComponent {
   pi = Math.PI;
   porcentaje = 0.234;
   salario = 1234.5;
+  heroe = {
+    nombre: 'Logan',
+    clave: 'Lobezno',
+    edad: '222',
+    dirección: {
+      calle: 'Graymalkin Lane',
+      numero: 1407,
+      municipio: 'Salem Center',
+    },
+  };
 }
