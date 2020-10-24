@@ -68,6 +68,19 @@
           <td>Pipe personalizado: Capitalización</td>
           <td>{{jero | capitalizar}}</td>
         </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td>
+            Pipe personalizado: Contraseña <br>
+            contrasena:{{activar}} <br>
+            <button
+              (click)="activar=!activar"
+              class="btn btn-outline-primary">
+              Activar/Desactivar
+            </button>
+          </td>
+          <td>{{nombre | contrasena:activar}}</td>
+        </tr>
       </tbody>
     </table>
   </div>
