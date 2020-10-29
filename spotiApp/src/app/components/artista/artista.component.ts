@@ -42,7 +42,6 @@ export class ArtistaComponent implements OnInit {
   getTopTracks(id: string): any {
     this.spotifyService.getTopTracks(id)
       .subscribe(topTracks => {
-        console.log(topTracks);
         this.topTracks = topTracks;
       });
   }
