@@ -36,7 +36,7 @@
           <td>{{topTrack.name}}</td>
           <td>
             <iframe
-              [src]="topTrack.uri | domseguro: 'https://open.spotify.com/embed/track/'"
+              [src]="topTrack.uri | domseguro"
               width="300"
               height="80"
               frameborder="0"

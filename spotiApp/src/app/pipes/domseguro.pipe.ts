@@ -11,9 +11,11 @@ export class DomseguroPipe implements PipeTransform {
     private domSanitizer: DomSanitizer
   ){ }
 
-  transform(value: string, url: string): any {
+  transform(value: string): any {
+    const URL = 'https://open.spotify.com/embed/track/';
     const ID = value.split(':');
-    return this.domSanitizer.bypassSecurityTrustResourceUrl(url + ID[2]);
+
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(URL + ID[2]);
   }
 
 }
