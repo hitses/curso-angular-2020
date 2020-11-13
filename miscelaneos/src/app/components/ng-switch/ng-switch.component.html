@@ -1,0 +1,35 @@
+<button style="margin: 5px 0;" type="button" (click)="alerta='primary'" class="btn btn-primary">Cambiar a primaria</button>
+<button style="margin: 5px 0;" type="button" (click)="alerta='secondary'" class="btn btn-primary">Cambiar a secundaria</button>
+<button style="margin: 5px 0;" type="button" (click)="alerta='success'" class="btn btn-primary">Cambiar a exitosa</button>
+<button style="margin: 5px 0;" type="button" (click)="alerta='warning'" class="btn btn-primary">Cambiar a aviso</button>
+<button style="margin: 5px 0;" type="button" (click)="alerta='info'" class="btn btn-primary">Cambiar a información</button>
+<button style="margin: 5px 0;" type="button" (click)="alerta='light'" class="btn btn-primary">Cambiar a clara</button>
+<button style="margin: 5px 0;" type="button" (click)="alerta='dark'" class="btn btn-primary">Cambiar a oscura</button>
+<button style="margin: 5px 0;" type="button" (click)="alerta='danger'" class="btn btn-primary">Cambiar a peligro</button>
+
+<div [ngSwitch]="alerta">
+  <div *ngSwitchCase="'primary'" class="alert alert-primary" role="alert">
+    Alerta primaria
+  </div>
+  <div *ngSwitchCase="'secondary'" class="alert alert-secondary" role="alert">
+    Alerta secundaria
+  </div>
+  <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+    Alerta exitosa
+  </div>
+  <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+    Alerta de aviso
+  </div>
+  <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+    Alerta de información
+  </div>
+  <div *ngSwitchCase="'light'" class="alert alert-light" role="alert">
+    Alerta clara
+  </div>
+  <div *ngSwitchCase="'dark'" class="alert alert-dark" role="alert">
+    Alerta oscura
+  </div>
+  <div *ngSwitchDefault class="alert alert-danger" role="alert">
+    Alerta de peligro
+  </div>
+</div>
