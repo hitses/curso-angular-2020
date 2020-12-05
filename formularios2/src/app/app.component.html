@@ -1,0 +1,77 @@
+<div class="container mt-5">
+  <h4>Formularios <small> reactivos </small></h4>
+  <hr>
+  <form autocomplete="off" [formGroup]="forma" (submit)="guardar()">
+  
+    <div>
+  
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Nombre</label>
+        <div class="col-8">
+  
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Nombre"
+            formControlName="nombre"
+            [class.is-invalid]="nombreNoValido"
+          >
+          <small class="text-danger" *ngIf="nombreNoValido">El nombre debe tener al menos 3 letras</small>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Apellido</label>
+        <div class="col-8">
+  
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Apellido"
+            formControlName="apellido"
+            [class.is-invalid]="apellidoNoValido"
+          >
+          <small class="text-danger" *ngIf="apellidoNoValido">El apellido debe tener al menos 3 letras</small>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Correo</label>
+      <div class="col-8">
+  
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Correo electrónico"
+          formControlName="correo"
+          [class.is-invalid]="correoNoValido"
+        >
+        <small class="text-danger" *ngIf="correoNoValido">El correo debe tener al menos 3 letras</small>
+      </div>
+    </div>
+  
+  
+  
+    <div class="form-group row">
+      <label class="col-2 col-form-label">&nbsp;</label>
+      <div class="input-group col-md-8">
+        <button type="submit" class="btn btn-outline-primary btn-block">
+          Guardar
+        </button>
+      </div>
+    </div>
+  
+  </form>
+</div>
+
+<hr>
+
+<pre>
+  Estado del formulario: {{forma.valid}}
+  Status: {{forma.status}}
+</pre>
+<pre>
+  {{forma.value | json}}
+</pre>
